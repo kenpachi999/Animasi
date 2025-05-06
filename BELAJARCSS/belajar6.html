@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interval</title>
+    <style>
+        #lingkaranJs {
+            width: 30px;
+            height: 30px;
+            background-color: green;
+            position: absolute;
+            left: 10px;
+            top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="lingkaranJs"></div>
+    <script>
+        const lingkaranJs = document.getElementById('lingkaranJs');
+        let posisiX = 1;
+        const intervalid = setInterval(() => {
+            opacity -= 0.05;
+            lingkaranJs.style.opacity = opacity;
+            if (opacity <= 0) {
+                clearInterval(intervalid);
+            }
+            }, 100);
+
+    </script>
+</body>
+</html>
